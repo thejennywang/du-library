@@ -14,7 +14,7 @@ export default Ember.Route.extend({
     xmlHttp.setRequestHeader("Accept", "application/json");
     xmlHttp.send( null );
     return xmlHttp.responseText;
-  }
+  };
     return JSON.parse(items(endpoint));
   }
 });
