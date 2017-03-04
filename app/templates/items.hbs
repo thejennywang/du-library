@@ -2,5 +2,12 @@
 <h1>Double Union Library</h1>
 
 {{#each model as |items|}}
+  <div style="display: none"><img src="{{items.master_image.url}}"></div>
   <h3>{{items.name}}</h3>
+  {{#each items.variations as |variation|}}
+  <h3>{{variation.sku}}</h3>
+  {{/each}}
+  
 {{/each}}
+
+{{#create-new-item newItem=model createItem="createItem"}}{{/create-new-item}}

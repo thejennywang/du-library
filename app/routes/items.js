@@ -9,7 +9,6 @@ export default Ember.Route.extend({
     var items = function httpGet(endpoint) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", endpoint, false ); // false for synchronous request
-    console.log(ENV);
     xmlHttp.setRequestHeader("Authorization", ENV.APP.SQUARE_PERSONAL_ACCESS_TOKEN);
     xmlHttp.setRequestHeader("Accept", "application/json");
     xmlHttp.send( null );

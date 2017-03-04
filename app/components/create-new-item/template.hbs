@@ -1,0 +1,20 @@
+{{yield}}
+<h2>Add a new book</h2>
+
+<form id ="NewItem">
+<p>
+{{input
+  placeholder="Name"
+  value=newItem.name
+  action="createItem"}}
+  </p>
+  <p>
+{{input
+  placeholder="ISBN-13"
+  value=newItem.variations.sku
+  action="createItem"}}
+  </p>
+  <p>
+  <button {{action 'createItem' newItem}}>Submit</button>
+  </p>
+  </form>
